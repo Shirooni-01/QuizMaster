@@ -74,19 +74,19 @@ http://127.0.0.1:5000
 
 ### 🏠 Home Page
 
-![Home](screenshot/home.png)
+![Home](screenshots/home.png)
 
 ---
 
 ### ❓ Quiz Page
 
-![Quiz](screenshot/quiz.png)
+![Quiz](screenshots/quiz.png)
 
 ---
 
 ### 🏆 Result Page
 
-![Result](screenshot/result.png)
+![Result](screenshots/result.png)
 
 ## 🎯 Future Improvements
 
