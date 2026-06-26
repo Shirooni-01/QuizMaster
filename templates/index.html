@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+
+    <div class="container">
+
+        <div class="hero">
+
+            <h1>🎯 QuizMaster</h1>
+
+            <p>
+                Challenge yourself with thousands of questions from multiple
+                categories and become the <span>Quiz King 👑</span>
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <form method="POST">
+
+                <div class="input-box">
+
+                    <label>Number of Questions</label>
+
+                    <select name="no_ques" required>
+
+                        <option value="">Select</option>
+
+                        <option value="5">5</option>
+
+                        <option value="10">10</option>
+
+                        <option value="15">15</option>
+
+                        <option value="20">20</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Category</label>
+
+                    <select name="category" required>
+
+                        <option value="9">General Knowledge</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="18">Computer Science</option>
+                        <option value="19">Mathematics</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="27">Animals</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Difficulty</label>
+
+                    <select name="diff">
+
+                        <option value="easy">Easy</option>
+
+                        <option value="medium">Medium</option>
+
+                        <option value="hard">Hard</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+
+                    <label>Question Type</label>
+
+                    <select name="type">
+
+                        <option value="multiple">Multiple Choice</option>
+
+                        <option value="boolean">True / False</option>
+
+                    </select>
+
+                </div>
+
+                <button class="start-btn">
+
+                    🚀 Start Quiz
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+{'response_code': 0, 'results': [{'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge', 'question':
+'What is the profession of Elon Musk&#039;s mom, Maye Musk?', 'correct_answer': 'Model', 'incorrect_answers':
+['Professor', 'Biologist', 'Musician']}, {'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge',
+'question': 'Which country has the Union Jack in its flag?', 'correct_answer': 'New Zealand', 'incorrect_answers':
+['South Africa', 'Canada', 'Hong Kong']}, {'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge',
+'question': 'What is the currency of India and Pakistan as well as a few other Asian countries?', 'correct_answer':
+'Rupee', 'incorrect_answers': ['Riyal', 'Peso', 'Dinar']}, {'type': 'multiple', 'difficulty': 'easy', 'category':
+'General Knowledge', 'question': 'What element has the chemical symbol Kr?', 'correct_answer': 'Krypton',
+'incorrect_answers': ['Kerosine', 'Kineticium', 'Curium']}, {'type': 'multiple', 'difficulty': 'easy', 'category':
+'General Knowledge', 'question': 'What alcoholic drink is made from molasses?', 'correct_answer': 'Rum',
+'incorrect_answers': ['Gin', 'Vodka', 'Whisky']}, {'type': 'multiple', 'difficulty': 'easy', 'category': 'General
+Knowledge', 'question': 'What do sailors call the left side of a boat?', 'correct_answer': 'Port', 'incorrect_answers':
+['Starboard', 'Bow', 'Stern']}, {'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge', 'question':
+'What is the full meaning of RAM?', 'correct_answer': 'Random Access Memory', 'incorrect_answers': ['Random Assist
+Memory', 'Rand Assist Mandate', 'Ram']}, {'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge',
+'question': 'Area 51 is located in which US state?', 'correct_answer': 'Nevada', 'incorrect_answers': ['Arizona', 'New
+Mexico', 'Utah']}, {'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge', 'question': 'In what year
+did Canada stop producing the penny?', 'correct_answer': '2012', 'incorrect_answers': ['2013', '2011', '2010']},
+{'type': 'multiple', 'difficulty': 'easy', 'category': 'General Knowledge', 'question': 'Which language is most widely
+spoken in Switzerland?', 'correct_answer': 'German', 'incorrect_answers': ['French', 'Italian', 'Swiss']}]} -->

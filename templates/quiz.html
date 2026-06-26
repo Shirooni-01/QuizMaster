@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster | Quiz</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .progress-bar {
+            width: {{ progress }}%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+
+    <div class="quiz-container">
+
+        <div class="quiz-top">
+
+            <h2>🎯 QuizMaster</h2>
+
+            <div class="badges">
+
+                <div class="badge">
+                    📝 Question
+                </div>
+
+                <div class="badge">
+                    ⚡ Good Luck
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar" ></div>
+
+        </div>  
+
+        <div class="question-box">
+
+            <h3>{{ question | safe }}</h3>
+
+        </div>
+
+        <form method="POST">
+
+            <div class="options">
+
+                {% for option in options %}
+
+                <div class="option">
+
+                    <input
+                        type="radio"
+                        name="answer"
+                        id="option{{ loop.index }}"
+                        value="{{ option }}"
+                        required>
+
+                    <label for="option{{ loop.index }}">
+                        {{ option | safe }}
+                    </label>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="quiz-btn">
+
+                <button type="submit" class="next-btn">
+
+                    Next ➜
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
